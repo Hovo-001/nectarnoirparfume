@@ -1,0 +1,252 @@
+.slider_item {
+    height: 100vh;
+}
+
+.swiper-button-prev {
+    left: var(--swiper-navigation-sides-offset, 50px);
+    color: var(--primary-champagne);
+}
+
+.swiper-button-next {
+    right: var(--swiper-navigation-sides-offset, 50px);
+    color: var(--primary-champagne);
+}
+
+h1 {
+    text-align: center;
+    padding: 2% 0;
+    color: var(--primary-champagne);
+}
+
+.home_slider_container>p {
+    padding: var(--corner-sizes);
+    text-align: center;
+}
+
+
+.categories_slide_block {
+    padding: var(--corner-sizes);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+
+.categories_item {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.categories_item img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: .3s;
+}
+
+.content_block {
+    height: 180px;
+    background: var(--primary-black);
+    color: var(--primary-white);
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+    transition: .3s;
+}
+
+.content_block * {
+    margin-bottom: 10px;
+}
+
+.content_block h2 {
+    color: var(--primary-champagne);
+}
+
+.categories_item:hover img {
+    scale: 1.1;
+}
+
+.categories_item:hover .content_block {
+    color: var(--primary-black);
+    background: var(--primary-white);
+}
+
+.content_block p {
+    font-size: 13px;
+}
+
+.brands_container {
+    padding: var(--corner-sizes);
+}
+
+.brands {
+    border: 1px solid #e1e1e1;
+    padding: 30px;
+    transition: .3s;
+}
+
+.brands:hover {
+    background: #e1e1e1;
+}
+
+.brands:hover img {
+    scale: 1.1;
+}
+
+.brands img {
+    width: 100%;
+    height: 80px;
+    object-fit: contain;
+    transition: .3s;
+}
+
+.swiper_slider_container {
+    padding: var(--corner-sizes);
+}
+
+.title {
+    padding: 2% 0;
+    font-size: 2em;
+    text-align: center;
+    position: relative;
+    color: var(--primary-champagne);
+}
+
+.title::before {
+    content: '';
+    width: 30%;
+    height: 1px;
+    background: var(--primary-champagne);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.title::after {
+    content: '';
+    width: 30%;
+    height: 1px;
+    background: var(--primary-champagne);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.advertisment_container {
+    padding: var(--corner-sizes);
+}
+
+.advertisment_container>h2 {
+    padding: 2% 0;
+}
+
+.pictures {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.pictures img {
+    width: 48%;
+    height: 350px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.pictures img:hover {
+    filter: contrast(80%);
+}
+
+
+@media screen and (max-width:768px) {
+    header {
+        background: var(--primary-black);
+        z-index: 999;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    header>a {
+        width: 30%;
+        margin-top: 10px;
+    }
+
+    header ul {
+        flex-direction: column;
+        font-size: 18px;
+        height: 100vh;
+    }
+
+    .pictures {
+        flex-direction: column;
+    }
+
+    .first_block {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .items {
+        grid-template-columns: 1fr;
+    }
+
+    .first_block ul {
+        grid-template-columns: 1fr;
+    }
+
+    .first_block img {
+        width: 30%;
+        margin-top: 20px;
+    }
+
+    .slider_item {
+        height: 50vh;
+    }
+
+    .categories_slide_block {
+        grid-template-columns: 1fr;
+    }
+
+    .title::after,
+    .title::before {
+        display: none;
+    }
+
+    .title {
+        font-size: 1.5em;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
+
+    .products_item {
+        background: #fff;
+    }
+
+    .brands {
+        padding: 15px;
+    }
+
+    .pictures img {
+        width: 100%
+    }
+
+    .burger-menu-icon {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+    .market_icons_container {
+        margin: 0;
+    }
+
+}

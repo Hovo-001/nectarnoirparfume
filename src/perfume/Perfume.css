@@ -1,0 +1,149 @@
+.products_container {
+    padding: var(--corner-sizes);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+
+.products_item {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+    background: #fff;
+}
+
+.products_item img {
+    width: 60%;
+}
+
+.products_item h2 {
+    font-size: 1em;
+    overflow: hidden;
+    width: 100%;
+    text-wrap: nowrap;
+    text-overflow:ellipsis;
+}
+
+.products_item h3 {
+    font-size: .9em;
+}
+
+.products_item p {
+    font-size: .8em;
+}
+
+.sale {
+    padding: 5px 10px;
+    background: red;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: #fff;
+    font-size: .7em;
+}
+
+.price {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: var(--corner-sizes);
+    align-items: center;
+}
+
+.price del {
+    text-decoration: line-through !important;
+    font-size: .8em;
+}
+
+.parfumes_container {
+    margin-top: 6%;
+}
+
+.w-pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2% !important;
+}
+
+.w-pagination.default > li {
+    margin-bottom: 2% !important;
+    background: #222 !important;
+}
+
+.w-pagination.default > li a {
+    color: var(--primary-white) !important;
+    font-weight: bold;
+}
+
+.w-pagination.default .active {
+    background: red !important;
+}
+
+.w-pagination.default  .active a {
+    color: white !important;
+}
+
+.icons {
+    position: absolute;
+    top: 10px;
+    right: -50px;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    transition: .3s;
+}
+
+.icons svg {
+    font-size: 20px !important;
+    cursor: pointer;
+    color: #000;
+    transition: .2s;
+}
+
+.products_item:hover .icons {
+    right: 20px;
+}
+
+.icons svg:hover {
+    color: red;
+}
+
+@media screen and (max-width:1024px) {
+    .products_container {
+        grid-template-columns: repeat(3,1fr);
+    }
+    .products_item .icons {
+        right: 20px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .products_container {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .products_container {
+        margin-top: 28%;
+    }
+    .products_item .icons {
+        right: 20px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .products_container {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .products_item .icons {
+        right: 20px;
+    }
+}
+

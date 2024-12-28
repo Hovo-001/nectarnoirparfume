@@ -1,0 +1,71 @@
+.collection_container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1rem;
+}
+
+.collection_wrapper {
+    padding: var(--corner-sizes);
+    margin-top: 4%;
+}
+
+.set_item {
+    padding: 15px;
+    border: 1px solid var(--primary-champagne);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+}
+
+.set_item img {
+    width: 100%;
+}
+
+.set_sale {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--primary-champagne);
+}
+
+.set_item .price {
+    justify-content: flex-start;
+    padding: 10px 0 !important;
+    font-size: 20px;
+}
+
+.set_item .icons {
+    right: 15px;
+    top: 15px;
+}
+
+.set_item .icons svg {
+    font-size: 25px !important;
+}
+
+.set_item p {
+    width: 100%;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width:768px) {
+    .collection_container {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .collection_wrapper {
+        margin-top: 25%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .collection_container {
+        grid-template-columns: 1fr
+    }
+    .collection_wrapper {
+        margin-top: 25%;
+    }
+}
